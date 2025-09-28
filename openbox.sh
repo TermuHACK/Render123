@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-# Устанавливаем всё нужное
-apt-get update
-apt-get install -y openbox xterm \
-    tigervnc-standalone-server novnc websockify \
-    && rm -rf /var/lib/apt/lists/*
+apt update || true
+DEBIAN_FRONTEND=noninteractive apt install -y \
+    openbox xterm tigervnc-standalone-server \
+    websockify novnc \
+    --no-install-recommends
 
 # Настройка VNC
 export DISPLAY=:1
