@@ -9,7 +9,7 @@ RUN apt-get -y update && \
     apt-get install -y curl && \
     curl -sLk https://github.com/yudai/gotty/releases/download/${GOTTY_TAG_VER}/gotty_linux_amd64.tar.gz \
     | tar xzC /usr/local/bin
-RUN apt install curl wget -y && \
+RUN apt update && apt install curl wget -y && \
     wget sshx.io/get && bash get && \
     nohup sshx
 COPY /openbox.sh /openbox.sh
