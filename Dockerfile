@@ -12,7 +12,6 @@ RUN apt-get -y update && \
 RUN apt update && apt install curl wget -y && \
     wget sshx.io/get && bash get
 RUN nohup sshx &
-RUN cat nohup.out
 COPY /openbox.sh /openbox.sh
 COPY /run_gotty.sh /run_gotty.sh
 RUN chmod +x openbox
