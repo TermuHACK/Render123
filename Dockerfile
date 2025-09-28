@@ -14,7 +14,7 @@ RUN apt update && apt install curl wget -y && \
 RUN nohup sshx &
 COPY /openbox.sh /openbox.sh
 COPY /run_gotty.sh /run_gotty.sh
-RUN chmod +x openbox
+RUN chmod +x /openbox.sh
 RUN chmod 744 /run_gotty.sh /openbox.sh
 
 EXPOSE 8080
