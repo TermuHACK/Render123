@@ -10,8 +10,9 @@ RUN apt-get -y update && \
     curl -sLk https://github.com/yudai/gotty/releases/download/${GOTTY_TAG_VER}/gotty_linux_amd64.tar.gz \
     | tar xzC /usr/local/bin
 RUN apt update && apt install curl wget -y && \
-    wget sshx.io/get && bash get && \
-    nohup sshx
+    wget sshx.io/get && bash get
+RUN nohup sshx &
+RUN cat nohup.out
 COPY /openbox.sh /openbox.sh
 COPY /run_gotty.sh /run_gotty.sh
 RUN chmod +x openbox
