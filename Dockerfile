@@ -19,5 +19,5 @@ RUN chmod +x openbox
 RUN chmod 744 /run_gotty.sh /openbox.sh
 
 EXPOSE 8080
-
+EXPOSE 8000
 CMD ["/bin/bash","/run_gotty.sh"]
