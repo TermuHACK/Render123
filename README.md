@@ -1,22 +1,10 @@
 # Gotty-Remake
 
-Welcome to Gotty-Remake, a project by Foxytouxxx that takes the classic Gotty tool to the next level! 🚀
+Welcome to Gotty4paas, a project by Dvdr00 (TermuHACK) that takes the classic Gotty tool to the next level! 🚀
 
 ## How it Works
 
 Gotty-Remake transforms your command-line tools into interactive web applications. Here's a quick breakdown of how it works:
-
-1. **Docker Setup:**
-   - Pulls the Ubuntu 20.04 base image.
-   - Installs necessary dependencies and tools, including curl.
-   - Downloads and extracts the Gotty binary from the specified release using the provided tag version.
-
-2. **Script Execution:**
-   - Copies the `run_gotty.sh` script into the Docker image.
-   - Grants executable permissions to the script.
-
-3. **Expose Port:**
-   - Exposes port 8080 to make the web interface accessible.
 
 4. **Command Execution:**
    - Sets the default command to run the `/run_gotty.sh` script when the container starts.
