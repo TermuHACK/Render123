@@ -21,8 +21,9 @@ RUN wget -q https://sshx.io/get -O /tmp/get && \
 # Копируем скрипты
 COPY /openbox.sh /openbox.sh
 COPY /run_gotty.sh /run_gotty.sh
-
-RUN chmod +x /openbox.sh /run_gotty.sh
+COPY /gui.sh /gui.sh
+COPY /misc.sh /misc.sh
+RUN chmod +x /openbox.sh /run_gotty.sh /gui.sh /misc.sh
 
 # Порты
 EXPOSE 8080
