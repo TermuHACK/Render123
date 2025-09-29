@@ -6,7 +6,7 @@ ENV GOTTY_TAG_VER=v1.0.1
 
 # Обновляем пакеты и ставим зависимости с кешем
 RUN apk update && apk upgrade && \
-    apk add --update-cache bash curl wget tar && \
+    apk add --update-cache bash curl wget tar gcompat && \
     rm -rf /var/cache/apk/*
 
 # Ставим gotty
